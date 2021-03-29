@@ -83,10 +83,3 @@ app.get("/", (req, res) => {
 });
 
 app.listen(process.env.PORT || port);
-
-// json File
-// "scripts": {
-//   "start": "node index.js",
-//   "start:dev": "nodemon index.js",
-//   "test": "echo \"Error: no test specified\" && exit 1"
-// },
