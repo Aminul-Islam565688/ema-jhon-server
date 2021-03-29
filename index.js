@@ -38,7 +38,7 @@ client.connect((err) => {
   app.get("/products", (req, res) => {
     productsCollection
       .find({})
-      .limit(10)
+      // .limit(10)
       .toArray((err, documents) => {
         res.send(documents);
       });
@@ -82,6 +82,4 @@ app.get("/", (req, res) => {
   res.send("Assalamu Walaikum");
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+app.listen(process.env.PORT || port);
